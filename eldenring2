@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo "You Died"
+sleep 2
+#First beast battle
+
+beast=$(( $RANDOM %2 ))
+
+echo "Your fist beast approaches. Prepare to battle. Pick a number between 0-1. (0-1)"
+sleep 2
+read tarnished
+
+if [[ $beast == $tarnished ]]; then
+	echo "Beast SLAYED!! Congrats fellow tarnished"
+else
+	echo "You Died"
+	exit 1
+fi
+sleep 2
+
+#Second battle
+
+Margit=$(( $RANDOM %10 ))
+
+echo "Boss battle Margit is here! Prepare to battle again, go big dick!! Pick a number between 0-9. (0-9)"
+
+read ultimate
+
+if [[ $Margit == $ultimate || $ultimate == "10" ]]; then
+	echo "You killed the first BOSS!!" 
+else
+	echo "You Died"
+fi
